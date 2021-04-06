@@ -47,7 +47,7 @@ class EngineBlock_Test_Saml2_AuthnRequestAnnotationDecoratorTest extends TestCas
         $request->setIssueInstant(0);
 
         $annotatedRequest = new EngineBlock_Saml2_AuthnRequestAnnotationDecorator($request);
-        $this->assertNull($annotatedRequest->getStepupObligations([]));
+        $this->assertEmpty($annotatedRequest->getStepupObligations([]));
     }
 
     public function test_retrieve_loa_obligations_one_match()
